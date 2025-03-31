@@ -8,19 +8,7 @@ Backend-сервис для управления задачами (аналог 
 - **Мониторинг** (Prometheus + Grafana)
 
 ## 🏗 Архитектура (Clean Architecture + DDD)
-trello-fastapi-bot/
-├── api/ # FastAPI приложение
-│ ├── app/
-│ │ ├── core/ # Ядро (конфиги, безопасность)
-│ │ ├── db/ # Работа с БД (SQLAlchemy 2.0)
-│ │ ├── domains/ # Бизнес-логика (DDD)
-│ │ ├── routes/ # API эндпоинты
-│ │ └── tasks/ # Фоновые задачи (Celery)
-├── bot/ # Telegram бот (aiogram)
-├── infra/ # DevOps
-│ ├── docker-compose.yml # Сервисы (API, бот, DB)
-│ └── prometheus/ # Мониторинг
-└── tests/ # Тесты (pytest)
+trello-fastapi-bot/api/(FastAPI приложение)/bot(Telegram бот)/infra(DevOps)/
 
 Copy
 
@@ -37,11 +25,11 @@ Copy
 git clone https://github.com/ваш-username/trello-fastapi-bot.git
 cd trello-fastapi-bot
 
-## 2.Настроить окружение:
+2.Настроить окружение:
 cp .env.example .env
 # Заполнить переменные в .env
 
-## 3. Запустить сервисы:
+3. Запустить сервисы:
 docker-compose -f infra/docker-compose.yml up --build
 
 ## 📡 Основные API-эндпоинты
@@ -60,7 +48,6 @@ JWT-аутентификация
 Rate limiting (Redis)
 Валидация данных (Pydantic)
 
-📊 Мониторинг
+## 📊 Мониторинг
 Prometheus: http://localhost:9090
-
 Grafana: http://localhost:3000
