@@ -32,7 +32,7 @@ git clone https://github.com/L1inkoln/trello-fastapi-bot.git
 
 cd trello-fastapi-bot
 
-3. **Настроить окружение**:
+2. **Настроить окружение**:
    
 cp .env.example .env
 
